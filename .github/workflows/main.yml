@@ -1,0 +1,27 @@
+# +++++++++++++++++++++++ #
+# (C) 2022 - SiapaHayo?
+# +++++++++++++++++++++++ #
+#
+#
+# +++++++++++++++++++++++ #
+name: HahahahaCI
+# +++++++++++++++++++++++ #
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+# +++++++++++++++++++++++ #
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mulai Bang...
+        env:
+          SUPER_SECRET: ${{ secrets.KEY }}
+        run: |
+          sudo apt-get update && sudo apt-get install ffmpeg -y
+          git clone https://TukangBot1:$SUPER_SECRET@github.com/TukangBot1/Private.git
+          cd Private && python3 test.py
+# +++++++++++++++++++++++ #
