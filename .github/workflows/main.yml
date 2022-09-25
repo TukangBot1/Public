@@ -22,6 +22,7 @@ jobs:
           SUPER_SECRET: ${{ secrets.KEY }}
         run: |
           sudo apt-get update && sudo apt-get install ffmpeg -y
+          pip3 install stem pydub SpeechRecognition selenium requests undetected-chromedriver==1.5.2
           git clone https://TukangBot1:$SUPER_SECRET@github.com/TukangBot1/Private.git
           cd Private && python3 test.py
 # +++++++++++++++++++++++ #
